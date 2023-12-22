@@ -4,6 +4,9 @@ import com.mindhub.homebankingJDK17.dto.AccountDTO;
 import com.mindhub.homebankingJDK17.models.Account;
 import com.mindhub.homebankingJDK17.models.AccountType;
 import com.mindhub.homebankingJDK17.models.Client;
+import com.mindhub.homebankingJDK17.services.AccountService;
+import com.mindhub.homebankingJDK17.services.ClientService;
+import com.mindhub.homebankingJDK17.services.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.List;
+
+import static com.mindhub.homebankingJDK17.services.utils.AccountUtils.randomAccountNumber;
 
 @RestController
 @RequestMapping("/api")
